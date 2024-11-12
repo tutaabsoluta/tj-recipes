@@ -1,17 +1,18 @@
+
 /* Font */
 
 html {
-    font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif;
 }
 
 /* Globals */
 
 h1 {
-  @apply font-playfair text-4xl font-bold leading-tight text-white;
+  @apply font-playfair text-[40px] font-bold leading-tight text-white;
 }
 
 h2 {
-  @apply font-playfair text-3xl font-semibold leading-snug text-white;
+  @apply font-playfair text-[36px] font-semibold leading-snug text-white;
 }
 
 h3 {
@@ -36,5 +37,23 @@ p {
 }
 
 body {
-    background: linear-gradient(90deg, #27355A 33%, #0F182C 100%);
-  }
+  background: linear-gradient(90deg, #27355A 33%, #0F182C 100%);
+}
+
+.bento-main {
+  background: linear-gradient(
+    to bottom,
+    rgba(217, 217, 217, 0) 24%,  
+    rgba(217, 217, 217, 0.1) 100%     
+  );
+  border-radius: 20px; 
+}
+
+.bento-sec {
+  background: linear-gradient(
+    to right,
+    rgba(217, 217, 217, 0) 24%,  
+    rgba(217, 217, 217, 0.1) 100%     
+  );
+  border-radius: 20px; 
+}
