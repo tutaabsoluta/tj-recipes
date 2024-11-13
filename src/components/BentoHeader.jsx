@@ -6,29 +6,25 @@ import { MdFastfood } from "react-icons/md";
 
 export const BentoHeader = () => {
   const [randomMeal, setRandomMeal] = useState([]);
-  const [bentoMeal, setbentoMeal] = useState({});
+  const [bentoMeal, setBentoMeal] = useState({});
 
   useEffect(() => {
-    const fetchRandomMeal = async () => {
+    const fetchData = async () => {
       try {
-        const randomMeal = await getRandomMeal();
-        setRandomMeal(randomMeal);
+        // Ejecutar ambas llamadas en paralelo
+        const [randomMealData, bentoMealData] = await Promise.all([
+          getRandomMeal(),
+          getMealById(52777),
+        ]);
+
+        setRandomMeal(randomMealData);
+        setBentoMeal(bentoMealData);
       } catch (error) {
-        console.error("Error fetching latest meals:", error);
+        console.error("Error fetching meals:", error);
       }
     };
 
-    const fetchBentoMeal = async () => {
-      try {
-        const bentoMeal = await getMealById(52777);
-        setbentoMeal(bentoMeal);
-      } catch (error) {
-        console.error("Error fetching meal id 1:", error);
-      }
-    };
-
-    fetchRandomMeal();
-    fetchBentoMeal();
+    fetchData();
   }, []);
 
   const { strMeal, strArea, strCategory, strMealThumb } = bentoMeal;
