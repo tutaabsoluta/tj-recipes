@@ -6,13 +6,15 @@ export const MainPlates = () => {
   const [meals, setMeals] = useState([]);
 
   useEffect(() => {
+
     const fetchMeals = async () => {
       try {
-        // Asume que tienes los IDs de las 4 recetas que quieres mostrar
+        // recipe id's
         const mealIds = [52772, 52773, 52774, 52775];
         const mealPromises = mealIds.map(id => getMealById(id));
         const mealData = await Promise.all(mealPromises);
         setMeals(mealData);
+
       } catch (error) {
         console.error("Error fetching meals:", error);
       }

@@ -8,14 +8,37 @@ export const BentoHeader = () => {
   const [randomMeal, setRandomMeal] = useState([]);
   const [bentoMeal, setBentoMeal] = useState({});
 
+
+  // useEffect(() => {
+  //   const fetchRandomMeal = async () => {
+  //     try {
+  //       const randomMeal = await getRandomMeal();
+  //       setRandomMeal(randomMeal);
+  //     } catch (error) {
+  //       console.error("Error fetching latest meals:", error);
+  //     }
+  //   };
+
+  //   const fetchBentoMeal = async () => {
+  //     try {
+  //       const bentoMeal = await getMealById(52777);
+  //       setbentoMeal(bentoMeal);
+  //     } catch (error) {
+  //       console.error("Error fetching meal id 1:", error);
+  //     }
+  //   };
+
+  //   fetchRandomMeal();
+  //   fetchBentoMeal();
+  // }, []);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Ejecutar ambas llamadas en paralelo
-        const [randomMealData, bentoMealData] = await Promise.all([
+        const [ randomMealData, bentoMealData ] = await Promise.all([
           getRandomMeal(),
-          getMealById(52777),
-        ]);
+          getMealById(52777)
+        ])
 
         setRandomMeal(randomMealData);
         setBentoMeal(bentoMealData);

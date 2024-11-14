@@ -1,4 +1,4 @@
-import { MainPlates } from "../components"
+import { Hero, MainPlates } from "../components"
 import { Header } from "../ui"
 
 export const HomePage = () => {
@@ -6,6 +6,7 @@ export const HomePage = () => {
     <>
       <Header />
       <MainPlates />
+      <Hero />
     </>
   )
 }
