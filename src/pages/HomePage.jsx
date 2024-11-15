@@ -1,4 +1,4 @@
-import { Hero, MainPlates } from "../components"
+import { Blog, Hero, MainPlates } from "../components"
 import { Header } from "../ui"
 
 export const HomePage = () => {
@@ -7,6 +7,9 @@ export const HomePage = () => {
       <Header />
       <MainPlates />
       <Hero />
+      <Blog />
     </>
   )
 }
+
+// TODO: la imagen del header no permite ver el cursor poniter del icono search

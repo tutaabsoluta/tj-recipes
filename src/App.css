@@ -54,7 +54,8 @@ body {
   background: linear-gradient(
     to right,
     rgba(217, 217, 217, 0) 24%,  
-    rgba(217, 217, 217, 0.1) 100%     
+    rgba(217, 217, 217, 0.05) 100%     
   );
   border-radius: 20px; 
 }
+
