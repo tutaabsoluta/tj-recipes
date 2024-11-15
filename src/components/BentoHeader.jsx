@@ -4,7 +4,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { MdPublic } from "react-icons/md";
 import { MdFastfood } from "react-icons/md";
 
-export const BentoHeader = () => {
+const BentoHeader = () => {
   const [randomMeal, setRandomMeal] = useState([]);
   const [bentoMeal, setBentoMeal] = useState({});
 
@@ -60,7 +60,7 @@ export const BentoHeader = () => {
             <img
               src={meal.strMealThumb}
               alt={meal.strMeal}
-              className="w-[250px] h-[250px] rounded-full shadow-xl mt-4"
+              className="w-[250px] h-[250px] rounded-xl shadow-xl mt-4"
             />
 
             <div className="mt-8">
@@ -85,7 +85,7 @@ export const BentoHeader = () => {
           <div>
             <img
               src={strMealThumb}
-              className="w-[150px] h-[150px] rounded-full shadow-xl"
+              className="w-[150px] h-[150px] rounded-xl shadow-xl"
             />
           </div>
 

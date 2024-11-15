@@ -7,7 +7,7 @@ export const MealCard = ({ src, title, area, category }) => {
       <div>
         <img
           src={ src }
-          className="w-[203px] h-[205px] rounded-full shadow-xl"
+          className="w-[203px] h-[205px] rounded-xl shadow-xl"
         />
       </div>
 

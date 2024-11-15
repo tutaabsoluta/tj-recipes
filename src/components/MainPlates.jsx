@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { getMealById } from "../api/mealdbApi";
 import { MealCard } from "./MealCard";
-import { motion } from "framer-motion";
 
 export const MainPlates = () => {
   const [meals, setMeals] = useState([]);
@@ -25,12 +24,8 @@ export const MainPlates = () => {
   }, []);
 
   return (
-    <motion.main
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.8 }}
-      className="container mx-auto mt-16"
+    <main
+      className="container mx-auto mt-[-60px]"
     >
       <p className="text-warmOrange uppercase text-sm font-light tracking-wide">
         Falling for something
@@ -50,7 +45,7 @@ export const MainPlates = () => {
           />
         ))}
       </div>
-    </motion.main>
+    </main>
   );
 };
 
