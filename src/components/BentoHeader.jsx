@@ -122,3 +122,5 @@ export const BentoHeader = () => {
     </div>
   );
 };
+
+export default BentoHeader;

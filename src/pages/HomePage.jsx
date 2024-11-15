@@ -1,5 +1,5 @@
 import { Blog, Hero, MainPlates } from "../components"
-import { Header } from "../ui"
+import { Footer, Header } from "../ui"
 
 export const HomePage = () => {
   return (
@@ -8,6 +8,7 @@ export const HomePage = () => {
       <MainPlates />
       <Hero />
       <Blog />
+      <Footer />
     </>
   )
 }
