@@ -1,5 +1,5 @@
 import { Blog, Hero, MainPlates } from "../components"
-import { Footer, Header } from "../ui"
+import { Header } from "../ui"
 
 export const HomePage = () => {
   return (
@@ -8,9 +8,14 @@ export const HomePage = () => {
       <MainPlates />
       <Hero />
       <Blog />
-      <Footer />
     </>
   )
 }
 
 // TODO: la imagen del header no permite ver el cursor poniter del icono search
+
+// REVISAR:
+// *1 Manejo del cache
+// *2 Animaciones con Framer Motion
+// *3 Uso de Lazy Loading
+// *4 Uso de Window Scroll para el Navbar

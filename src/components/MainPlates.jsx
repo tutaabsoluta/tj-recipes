@@ -25,7 +25,7 @@ export const MainPlates = () => {
 
   return (
     <main
-      className="container mx-auto mt-[-60px]"
+      className="container mx-auto mt-16 xl:mt-[-60px] px-8 xl:px-0"
     >
       <p className="text-warmOrange uppercase text-sm font-light tracking-wide">
         Falling for something
@@ -34,7 +34,7 @@ export const MainPlates = () => {
         Our main dishes of the moment️
       </h2>
 
-      <div className="grid grid-cols-4 place-items-center mt-4">
+      <div className="md:grid md:grid-cols-2 xl:grid-cols-4 place-items-center mt-4 xl:gap-16">
         {meals.map((meal, index) => (
           <MealCard 
             key={index}

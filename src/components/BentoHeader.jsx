@@ -53,7 +53,7 @@ const BentoHeader = () => {
   const { strMeal, strArea, strCategory, strMealThumb } = bentoMeal;
 
   return (
-    <div className="grid grid-cols-2 grid-rows-4 place-items-center gap-6">
+    <div className="flex flex-col md:grid grid-cols-2 grid-rows-4 place-items-center gap-6 mx-8 xl:mx-0">
       <div className="row-span-4 w-[333px] h-[410px] bento-main shadow-xl hover:scale-105 duration-300 ease-in-out">
         {randomMeal.map((meal) => (
           <div key={meal.idMeal} className="flex flex-col items-center">
@@ -80,12 +80,12 @@ const BentoHeader = () => {
         ))}
       </div>
 
-      <div className="flex items-center justify-center row-span-2 w-[410px] h-[195px] bento-sec shadow-xl hover:scale-105 duration-300 ease-in-out">
+      <div className="flex items-center justify-center row-span-2 w-full h-full xl:w-[410px] xl:h-[195px] bento-sec shadow-xl hover:scale-105 duration-300 ease-in-out p-6 md:p-4">
         <div className="flex items-center gap-6">
           <div>
             <img
               src={strMealThumb}
-              className="w-[150px] h-[150px] rounded-xl shadow-xl"
+              className="xl:w-[150px] xl:h-[150px] rounded-xl shadow-xl"
             />
           </div>
 
@@ -105,10 +105,10 @@ const BentoHeader = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-center row-span-2 w-[410px] h-[195px] bento-sec shadow-xl hover:scale-105 duration-300 ease-in-out">
-        <div className="flex items-center justify-center gap-6">
+      <div className="flex items-center justify-center row-span-2 w-auto h-auto xl:w-[410px] xl:h-[195px] bento-sec shadow-xl hover:scale-105 duration-300 ease-in-out">
+        <div className="flex items-center justify-center gap-6 p-8 md:p-4">
           <button
-            className="rounded-full w-[112px] h-[112px] flex items-center justify-center shadow-xl"
+            className="rounded-full p-4  md:p-8 flex items-center justify-center shadow-xl"
             style={{ backgroundColor: "rgba(211, 211, 211, 0.15)" }}
           >
             <FaArrowRightLong

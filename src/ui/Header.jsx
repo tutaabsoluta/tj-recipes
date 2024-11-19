@@ -1,6 +1,5 @@
 import { Suspense, lazy } from "react";
 import { motion } from "framer-motion";
-import { Navbar } from "./Navbar";
 
 // Lazy loading 
 const BentoHeader = lazy(() => import("../components/BentoHeader"));
@@ -8,12 +7,11 @@ const BentoHeader = lazy(() => import("../components/BentoHeader"));
 export const Header = () => {
   return (
     <header className="container mx-auto mt-8 overflow-hidden">
-      <Navbar />
 
-      <div className="flex justify-between items-center mt-[-150px]">
-        <div className="flex flex-col items-center">
+      <div className="xl:flex justify-between items-center xl:mt-[-150px]">
+        <div className="xl:flex flex-col items-center">
           <motion.h1 
-            className="w-[747px] h-[159px] mb-16 tracking-wider"
+            className="w-full xl:w-[747px] h-auto xl:h-[159px] mb-16 tracking-wider order-1 md:order-none mt-16 text-center xl:text-left px-6 xl:mx-0"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -27,6 +25,7 @@ export const Header = () => {
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
+              className="order-2 md:order-none"
             >
               <BentoHeader />
             </motion.div>
@@ -34,13 +33,13 @@ export const Header = () => {
         </div>
 
         <motion.div 
-          className="mr-[-80px]"
+          className="mr-[-80px] z-[-1]"
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
         >
           <img
-            className="w-auto h-auto"
+            className="w-auto h-auto hidden xl:block"
             src="HeaderImage.png"
             alt="Cocoa Grains"
           />

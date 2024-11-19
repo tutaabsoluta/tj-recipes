@@ -8,7 +8,7 @@ html {
 /* Globals */
 
 h1 {
-  @apply font-playfair text-[40px] font-bold leading-tight text-white;
+  @apply font-playfair text-2xl xl:text-[40px] font-bold leading-tight text-white;
 }
 
 h2 {

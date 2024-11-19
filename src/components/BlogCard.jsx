@@ -2,23 +2,23 @@
 export const BlogCard = () => {
   return (
     <article>
-        <div className="flex items-center w-[616px] h-[269px] bento-sec border border-slate-600">
+        <div className="flex items-center max-w-full flex-1 md:h-[269px] bento-sec border border-slate-600 py-8">
             {/* Image */}
             <div>
-                <img src="BlogImage.png" alt="Blog Image" className="w-[197px] h-[269px]" />
+                <img src="BlogImage.png" alt="Blog Image" className="hidden md:block" />
             </div>
             
             {/* Content */}
-            <div className="px-8">
-                <h4 className="mb-6">The power of essential oils</h4>
-                <p className="text-sm text-softBlueGray tracking-wider w-[349px] h-[96px] mb-6">Join us on social media to share, learn and grow together in our quest for ecological and economical recipes. Your voice matters, and we look forward to welcoming you to our engaged community!</p>
+            <div className="px-8 flex-1">
+                <h4 className="mb-6 mt12">The power of essential oils</h4>
+                <p className="text-sm text-center md:text-left text-softBlueGray tracking-wider h-auto mb-6">Join us on social media to share, learn and grow together in our quest for ecological and economical recipes.</p>
                 
-                <div className="w-[350px] bg-slate-500 h-[2px]"></div>
+                <div className="w-auto bg-slate-500 h-[2px]"></div>
 
                 {/* Author and Date */}
                 <div className="flex items-center gap-3 mt-6 tracking-wide">
                     <div>
-                        <img src="Author.png" alt="" />
+                        <img src="Author.png" alt="Person Selfie" />
                     </div>
                     <div>
                         <h5 className="text-sm font-bold text-softBlueGray">Author</h5>
