@@ -75,5 +75,16 @@ export const getMealById = async (id) => {
   }
 };
 
+export const getMealByName = async ( name ) => {
+  try {
+    const resp = await mealdbApi.get(`search.php?s=${name}`);
+    const data = resp.data.meals
+    
+    return data;
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 
 
