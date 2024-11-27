@@ -5,14 +5,13 @@ export const HomePage = () => {
   return (
     <>
       <Header />
-      <MainPlates />
+      {/* <MainPlates /> */}
       <Hero />
       <Blog />
     </>
   )
 }
 
-// TODO: la imagen del header no permite ver el cursor poniter del icono search
 
 // REVISAR:
 // *1 Manejo del cache

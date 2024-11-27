@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { getMealByName } from "../api/mealdbApi";
 import { useForm } from "../hooks/useForm";
 import { MealCard } from "../components/MealCard";
@@ -6,13 +5,13 @@ import { useMealStore } from "../store/store";
 
 export const SearchPage = () => {
   const { searchText, onInputChange } = useForm();
-  const setRecipe = useMealStore( (state) => state.setRecipe );
-  const recipe = useMealStore( (state) => state.recipe );
+  const setRecipes = useMealStore( (state) => state.setRecipes );
+  const recipes = useMealStore( (state) => state.recipes );
 
   const onSearch = async (e) => {
     e.preventDefault();
     try {
-      setRecipe(await getMealByName(searchText));
+      setRecipes(await getMealByName(searchText));
     } catch (error) {
       console.log(error);
     }
@@ -25,8 +24,8 @@ export const SearchPage = () => {
           <input
             type="text"
             name="searchText"
-            value={searchText}
-            onChange={onInputChange}
+            value={ searchText }
+            onChange={ onInputChange }
           />
         </div>
       </form>
@@ -34,13 +33,11 @@ export const SearchPage = () => {
       <div
         className="grid grid-cols-4 gap-6 place-items-center"
       >
-        {recipe ? (
-          recipe.map((meal) => (
+        {recipes ? (
+          recipes.map((meal) => (
             <MealCard
-              title={meal.strMeal}
-              src={meal.strMealThumb}
-              area={meal.strArea}
-              category={meal.strCategory}
+              id={ meal.idMeal }
+              meal={ meal } 
             />
           ))
         ) : (
