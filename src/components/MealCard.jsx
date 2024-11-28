@@ -7,35 +7,55 @@ export const MealCard = ({ id, meal }) => {
   const navigate = useNavigate();
 
   const onRecipe = () => {
-    getRecipeById(id); // Usar el ID específico de esta receta
+    getRecipeById(id);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     navigate("/recipe");
   };
 
   return (
     <div
-      className="bento-main w-[310px] h-[381px] flex flex-col items-center justify-center cursor-pointer"
+      className="bento-main w-[310px] h-[381px] flex flex-col items-center justify-center cursor-pointer 
+      hover:scale-105 transition-all duration-300 
+      bg-white/5 backdrop-blur-sm 
+      rounded-2xl p-4 
+      hover:shadow-[0_0_20px_rgba(253,189,132,0.15)] 
+      border border-white/10"
       onClick={onRecipe}
     >
-      <div>
+      <div className="overflow-hidden rounded-xl">
         <img
-          src={ meal.strMealThumb } // Imagen individual pasada como prop
-          className="w-[203px] h-[205px] rounded-xl shadow-xl"
-          alt={ meal.strMeal }
+          src={meal.strMealThumb}
+          className="w-[203px] h-[205px] rounded-xl shadow-xl hover:scale-110 transition-all duration-300 object-cover"
+          alt={meal.strMeal}
         />
       </div>
 
-      <div>
-        <p className="tracking-wider text-xl mt-8 text-center">{ meal.strMeal }</p>
-        <div className="flex items-center justify-center gap-6 mt-4">
-          <p className="flex items-center gap-1 text-[14px] text-lightGray">
-            <MdPublic color="FDBD84" />
-            { meal.strArea }
-          </p>
+      <div className="w-full px-4">
+        <p className="tracking-wider text-xl mt-6 text-center font-medium 
+          bg-gradient-to-r from-[#FDBD84] to-[#FDBD84]/70 bg-clip-text text-transparent
+          mb-6">
+          {meal.strMeal}
+        </p>
+        <div className="flex items-center justify-center gap-4 mt-3">
+          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full
+            bg-gradient-to-r from-white/10 to-transparent
+            border border-white/10 backdrop-blur-sm
+            hover:from-[#FDBD84]/20 hover:to-transparent transition-all duration-300">
+            <MdPublic className="text-[#FDBD84]" size={18} />
+            <span className="text-[14px] text-lightGray hover:text-[#FDBD84] transition-colors">
+              {meal.strArea}
+            </span>
+          </div>
           
-          <p className="flex items-center gap-2 text-[14px] text-lightGray">
-            <MdFastfood color="FDBD84" />
-            { meal.strCategory }
-          </p>
+          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full
+            bg-gradient-to-r from-white/10 to-transparent
+            border border-white/10 backdrop-blur-sm
+            hover:from-[#FDBD84]/20 hover:to-transparent transition-all duration-300">
+            <MdFastfood className="text-[#FDBD84]" size={18} />
+            <span className="text-[14px] text-lightGray hover:text-[#FDBD84] transition-colors">
+              {meal.strCategory}
+            </span>
+          </div>
         </div>
       </div>
     </div>
