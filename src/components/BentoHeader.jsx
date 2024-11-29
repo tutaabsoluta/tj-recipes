@@ -8,7 +8,6 @@ const BentoHeader = () => {
   const [randomMeal, setRandomMeal] = useState([]);
   const [bentoMeal, setBentoMeal] = useState({});
 
-
   // useEffect(() => {
   //   const fetchRandomMeal = async () => {
   //     try {
@@ -35,10 +34,10 @@ const BentoHeader = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [ randomMealData, bentoMealData ] = await Promise.all([
+        const [randomMealData, bentoMealData] = await Promise.all([
           getRandomMeal(),
-          getMealById(52777)
-        ])
+          getMealById(52777),
+        ]);
 
         setRandomMeal(randomMealData);
         setBentoMeal(bentoMealData);
@@ -64,7 +63,9 @@ const BentoHeader = () => {
             />
 
             <div className="mt-8">
-              <p className="text-center tracking-wider text-xl">{meal.strMeal}</p>
+              <p className="text-center tracking-wider text-xl">
+                {meal.strMeal}
+              </p>
               <div className="flex items-center justify-center gap-8 mt-4">
                 <p className="flex items-center gap-1 text-[14px] text-lightGray">
                   <MdPublic color="FDBD84" />
@@ -86,6 +87,7 @@ const BentoHeader = () => {
             <img
               src={strMealThumb}
               className="xl:w-[150px] xl:h-[150px] rounded-xl shadow-xl"
+              alt="Meal Cooked"
             />
           </div>
 
@@ -108,15 +110,20 @@ const BentoHeader = () => {
       <div className="flex items-center justify-center row-span-2 w-auto h-auto xl:w-[410px] xl:h-[195px] bento-sec shadow-xl hover:scale-105 duration-300 ease-in-out">
         <div className="flex items-center justify-center gap-6 p-8 md:p-4">
           <button
-            className="rounded-full p-4  md:p-8 flex items-center justify-center shadow-xl"
+            className="rounded-full p-4 md:p-8 flex items-center justify-center shadow-xl"
             style={{ backgroundColor: "rgba(211, 211, 211, 0.15)" }}
           >
+            <span className="sr-only">Go to next step</span>{" "}
+            {/* Solo visible para lectores de pantalla */}
             <FaArrowRightLong
               color="white"
               style={{ width: "42px", height: "auto" }}
             />
           </button>
-          <p className="tracking-wider text-xl">Discover all our recipes here.</p>
+
+          <p className="tracking-wider text-xl">
+            Discover all our recipes here.
+          </p>
         </div>
       </div>
     </div>

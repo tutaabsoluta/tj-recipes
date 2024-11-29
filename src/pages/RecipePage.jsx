@@ -21,7 +21,7 @@ export const RecipePage = () => {
     <section className="container mx-auto py-24 px-8">
 
       {/* Main Layout */}
-      <div className="grid grid-cols-12 gap-12">
+      <div className="md:grid grid-cols-12 gap-12">
 
         <div className="col-span-7">
           <p className="uppercase text-warmOrange tracking-widest text-xs font-bold">

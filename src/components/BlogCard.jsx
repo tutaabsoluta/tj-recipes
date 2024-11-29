@@ -5,7 +5,7 @@ export const BlogCard = () => {
         <div className="flex items-center max-w-full flex-1 md:h-[269px] bento-sec border border-slate-600 py-8">
             {/* Image */}
             <div>
-                <img src="BlogImage.png" alt="Blog Image" className="hidden md:block" />
+                <img src="BlogImage.webp" alt="Blog Image" className="hidden md:block" />
             </div>
             
             {/* Content */}
@@ -18,7 +18,7 @@ export const BlogCard = () => {
                 {/* Author and Date */}
                 <div className="flex items-center gap-3 mt-6 tracking-wide">
                     <div>
-                        <img src="Author.png" alt="Person Selfie" />
+                        <img src="Author.webp" alt="Person Selfie" />
                     </div>
                     <div>
                         <h5 className="text-sm font-bold text-softBlueGray">Author</h5>

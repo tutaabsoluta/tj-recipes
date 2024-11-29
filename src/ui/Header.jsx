@@ -40,7 +40,7 @@ export const Header = () => {
         >
           <img
             className="w-auto h-auto hidden xl:block"
-            src="HeaderImage.png"
+            src="HeaderImage.webp"
             alt="Cocoa Grains"
           />
         </motion.div>

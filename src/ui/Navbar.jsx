@@ -41,7 +41,7 @@ export const Navbar = () => {
             className="w-[25px] h-[20px]"
           />
           <img
-            src="Logo.png"
+            src="Logo.webp"
             alt="Company Logo"
             className="w-[212px] h-[67px] hidden md:block"
             onClick={ onHome }

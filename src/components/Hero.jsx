@@ -22,7 +22,7 @@ export const Hero = () => {
         difference while enjoying tasty, planet-friendly meals.
       </p>
       <img
-        src="Sign.png"
+        src="Sign.webp"
         alt="Signature"
         className="absolute -bottom-1 md:-bottom-8 right-16"
       />

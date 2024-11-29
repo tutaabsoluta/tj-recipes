@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <footer className=" bg-gradient-to-r from-darkBlue to-slate-800 py-16 mt-32">
       <div className="flex flex-col items-center tracking-widest">
-        <img src="Logo.png" alt="Logo Image" className="w-[212px] h-[67px]" />
+        <img src="Logo.webp" alt="Logo Image" className="w-[212px] h-[67px]" />
         <p className="text-warmOrange uppercase mt-20 text-xs">Community</p>
         <h2 className="text-center">Follow us on our social networks</h2>
         <p className="max-w-xs md:max-w-xl xl:max-w-6xl text-center mt-8 text-softBlueGray mb-8">
