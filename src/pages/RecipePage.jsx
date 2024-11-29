@@ -7,8 +7,6 @@ export const RecipePage = () => {
 
   const currentRecipe = recipes.find((recipe) => recipe.idMeal === activeId);
 
-  // Evalua que incluya el string y que tenga un valor valido
-  // Se actualiza cada llave con su valor asociado
   const ingredients = Object.keys(currentRecipe)
     .filter((key) => key.includes("strIngredient") && currentRecipe[key])
     .map((key) => currentRecipe[key]);
@@ -21,16 +19,17 @@ export const RecipePage = () => {
 
   return (
     <section className="container mx-auto py-24 px-8">
-      {/* Layout principal con grid en lugar de flex */}
+
+      {/* Main Layout */}
       <div className="grid grid-cols-12 gap-12">
-        {/* Contenido principal - ajustado a 7 columnas */}
+
         <div className="col-span-7">
           <p className="uppercase text-warmOrange tracking-widest text-xs font-bold">
             Main Dish
           </p>
           <h3 className="text-4xl md:text-5xl mb-4">{currentRecipe.strMeal}</h3>
           
-          {/* Categoría y Área - mejorado el espaciado */}
+
           <div className="flex gap-6 mb-8">
             <div className="flex items-center gap-2 bg-softBlueGray/10 px-4 py-2 rounded-lg">
               <p>{currentRecipe.strCategory}</p>
@@ -42,7 +41,6 @@ export const RecipePage = () => {
             </div>
           </div>
 
-          {/* Imagen responsive para móviles */}
           <div className="md:hidden mb-8">
             <img
               src={currentRecipe.strMealThumb}
@@ -51,7 +49,6 @@ export const RecipePage = () => {
             />
           </div>
 
-          {/* Ingredients - layout mejorado */}
           <div className="mb-12">
             <h5 className="font-bold text-xl mb-4">Ingredients</h5>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -71,10 +68,10 @@ export const RecipePage = () => {
             </div>
           </div>
 
-          {/* Instructions - diseño mejorado */}
+          {/* Instructions */}
           <div>
             <h5 className="font-bold text-xl mb-6">Steps to Follow</h5>
-            <div className="space-y-6 relative before:absolute before:left-[22px] before:top-0 before:h-full before:w-[2px] before:bg-warmOrange/20">
+            <div className="space-y-6">
               {instructions
                 .filter((instruction) => instruction.trim() !== "")
                 .map((instruction, index) => (
@@ -98,7 +95,7 @@ export const RecipePage = () => {
           </div>
         </div>
 
-        {/* Imagen lateral - ajustada a 5 columnas */}
+        {/* Image */}
         <div className="hidden md:block col-span-5">
           <div className="sticky top-24">
             <img

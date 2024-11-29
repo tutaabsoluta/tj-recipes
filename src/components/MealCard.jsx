@@ -14,7 +14,7 @@ export const MealCard = ({ id, meal }) => {
 
   return (
     <div
-      className="bento-main w-[310px] h-[381px] flex flex-col items-center justify-center cursor-pointer 
+      className="bento-main md:min-w-72 2xl:min-w-80 md:min-h-96 flex flex-col items-center justify-center cursor-pointer 
       hover:scale-105 transition-all duration-300 
       bg-white/5 backdrop-blur-sm 
       rounded-2xl p-4 

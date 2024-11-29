@@ -59,17 +59,5 @@ body {
   border-radius: 20px; 
 }
 
-.scrollbar-custom::-webkit-scrollbar {
-  width: 8px; 
-}
 
-.scrollbar-custom::-webkit-scrollbar-thumb {
-  background-color: #FDBD84; 
-  border-radius: 9999px; 
-}
-
-.scrollbar-custom::-webkit-scrollbar-track {
-  background: #d9d9d97e; 
-  border-radius: 9999px;
-}
 
